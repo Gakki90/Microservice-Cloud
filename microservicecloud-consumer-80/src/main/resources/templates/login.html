@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Signin Template for Bootstrap</title>
+		<!-- Bootstrap core CSS -->
+		<link th:href="@{~/asserts/css/bootstrap.min.css}" rel="stylesheet">
+		<!--<div th:include="common/common::commonScript"></div>-->
+
+		<!-- Custom styles for this template -->
+		<link th:href="@{~/asserts/css/signin.css}" rel="stylesheet">
+		<script	src="/jq/jquery_2_1.min.js"></script>
+		<style type="text/css">
+			.form-signin{
+				position: absolute;/*绝对定位*/
+				width: 300px;
+				height: 200px;
+
+				text-align: center;/*(让div中的内容居中)*/
+				top: 50%;
+				left: 50%;
+				margin-top: -250px;
+				margin-left: -150px;
+			}
+		</style>
+		<!--<script>-->
+			<!--layui.use([ 'laydate', 'laypage', 'layer', 'table', 'carousel', 'upload',-->
+				<!--'element' ], function() {-->
+				<!--var laydate = layui.laydate //日期-->
+						<!--, laypage = layui.laypage //分页-->
+						<!--, layer = layui.layer //弹层-->
+						<!--, table = layui.table //表格-->
+						<!--, carousel = layui.carousel //轮播-->
+						<!--, upload = layui.upload //上传-->
+						<!--, element = layui.element; //元素操作-->
+
+			<!--});-->
+		<!--</script>-->
+
+		<!--<script>-->
+			<!--$(function() {-->
+				<!--$("#name").focus();-->
+			<!--});-->
+			<!--function go_login() {-->
+
+				<!--var form = document.getElementById('login_form');-->
+				<!--var name = form.getElementsByTagName('input')[0];-->
+				<!--var password = form.getElementsByTagName('input')[1];-->
+				<!--console.log(name.value + " " + password.value);-->
+
+
+				<!--$.post('admin/login', {-->
+					<!--name : name.value,-->
+					<!--password : password.value-->
+				<!--}, function(result) {-->
+					<!--console.log(result.success)-->
+
+
+					<!--if (result.success) {-->
+						<!--layer.closeAll();-->
+							<!--window.location.href = "/admin/main";-->
+					<!--} else {-->
+						<!--layer.closeAll();-->
+						<!--layer.alert(result.msg);-->
+					<!--}-->
+				<!--}, 'json');-->
+			<!--}-->
+		<!--</script>-->
+	</head>
+
+	<body class="text-center">
+		<form class="form-signin"  action="/admin/login" id="login_form" method="post" >
+			<img class="mb-4" th:src="@{~/asserts/img/timg.svg}" alt="" width="72" height="72">
+			<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+			<p style="color:red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}" ></p>
+			<label class="sr-only">Username</label>
+			<input type="text" class="form-control" name="name" placeholder="Username" required="" autofocus="">
+			<label class="sr-only">Password</label>
+			<input type="password" class="form-control" name="password" placeholder="Password" required="">
+			<div class="checkbox mb-3">
+				<label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit"  >Sign in</button>
+			<p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+			<a class="btn btn-sm">中文</a>
+			<a class="btn btn-sm">English</a>
+		</form>
+	</body>
+
+</html>
