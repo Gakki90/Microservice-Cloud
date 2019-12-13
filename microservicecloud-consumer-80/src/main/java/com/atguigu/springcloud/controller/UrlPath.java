@@ -10,7 +10,7 @@ public class UrlPath {
     /**
     * user service
      */
-    static String prefix="http://myzuul.com:9527/user";
+    static String prefix="http://192.168.37.132:9527/user";
     public final static String GET_USER = prefix +"/admin/user/getOne";
     public final static String GET_USER_LIST = prefix +"/admin/user/list";
     public final static String ADD_USER = prefix +"/admin/user/add";
@@ -38,7 +38,7 @@ public class UrlPath {
     /**
      * order service
      */
-    static String prefix_order="http://myzuul.com:9527/order";
+    static String prefix_order="http://192.168.37.132:9527/order";
 
     public final static String GET_ORDER =  prefix_order +"/admin/order/getOne";
     public final static String GET_ORDER_LIST =  prefix_order +"/admin/order/list";
@@ -46,7 +46,7 @@ public class UrlPath {
     /**
      * park service
      */
-    static String prefix_park="http://myzuul.com:9527/park";
+    static String prefix_park="http://192.168.37.132:9527/park";
 
     public final static String GET_PARK =  prefix_park +"/admin/park/getOne";
     public final static String ADD_PARK =  prefix_park +"/admin/park/add";
