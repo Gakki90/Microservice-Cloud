@@ -103,7 +103,7 @@ public class AdminUserController {
 		 */
 		@ResponseBody
 		@RequestMapping("/list")
-		public Map<String, Object> list(@RequestParam(value = "page", required = false,defaultValue = "0") Integer page,
+		public Map<String, Object> list(@RequestParam(value = "page", required = false,defaultValue = "1") Integer page,
 				@RequestParam(value = "limit", required = false,defaultValue = "500") Integer limit
 
 				) throws Exception {
