@@ -35,8 +35,8 @@ public class AdminOrderController {
 		 */
 		@ResponseBody
 		@RequestMapping("/list")
-		public Map<String, Object> list(@RequestParam(value = "page", required = false) Integer page,
-				@RequestParam(value = "limit", required = false) Integer limit, 
+		public Map<String, Object> list(@RequestParam(value = "page", required = false,defaultValue = "1") Integer page,
+				@RequestParam(value = "limit", required = false,defaultValue = "500") Integer limit,
 				HttpServletResponse response,
 				HttpServletRequest request) throws Exception {
 			Map<String, Object> map = new HashMap<String, Object>();
