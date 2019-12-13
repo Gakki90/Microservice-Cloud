@@ -9,3 +9,12 @@ spring:
       server:
         git:
           uri: https://github.com/Gakki90/microservice-config #GitHub\u4E0A\u9762\u7684git\u4ED3\u5E93\u540D\u5B57
+
+  rabbitmq:
+    host: 192.168.37.132
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
