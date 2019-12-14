@@ -32,7 +32,7 @@ public class HouTaiSpaceController {
 		mav.addObject("park",park);
 		mav.addObject("pageTitle", "车位状况");
 		mav.addObject("title", "车位状况");
-		mav.setViewName("/admin/page/space/space_manage");
+		mav.setViewName("admin/page/space/space_manage");
 		return mav;
 	}
 	
@@ -56,7 +56,7 @@ public class HouTaiSpaceController {
 		mav.addObject("order", order);
 		mav.addObject("btn_text", "修改");
 		mav.addObject("save_url", "/admin/order/update?id=" + id);
-		mav.setViewName("/admin/page/order/add_update");
+		mav.setViewName("admin/page/order/add_update");
 		return mav;
 	}
 

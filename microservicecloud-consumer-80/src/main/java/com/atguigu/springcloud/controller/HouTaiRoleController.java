@@ -27,7 +27,7 @@ public class HouTaiRoleController {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("pageTitle", "角色管理");
 		mav.addObject("title", "角色管理");
-		mav.setViewName("/admin/page/role/role_manage");
+		mav.setViewName("admin/page/role/role_manage");
 		return mav;
 	}
 	
@@ -40,7 +40,7 @@ public class HouTaiRoleController {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("btn_text", "添加");
 		mav.addObject("save_url", "/admin/role/add");
-		mav.setViewName("/admin/page/role/add_update");
+		mav.setViewName("admin/page/role/add_update");
 		return mav;
 	}
 	
@@ -58,7 +58,7 @@ public class HouTaiRoleController {
 		mav.addObject("role", role);
 		mav.addObject("btn_text", "修改");
 		mav.addObject("save_url", "/admin/role/update?id=" + id);
-		mav.setViewName("/admin/page/role/add_update");
+		mav.setViewName("admin/page/role/add_update");
 		return mav;
 	}
 
@@ -71,7 +71,7 @@ public class HouTaiRoleController {
 		mav.addObject("role", role);
 		mav.addObject("btn_text", "修改");
 		mav.addObject("save_url", "/admin/role/update?id=" + id);
-		mav.setViewName("/admin/page/role/set_menu");
+		mav.setViewName("admin/page/role/set_menu");
 		return mav;
 	}
 }

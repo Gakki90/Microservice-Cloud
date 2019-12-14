@@ -30,7 +30,7 @@ public class HouTaiMenuController {
 		mav.addObject("title", "菜单管理");
 		mav.addObject("pId", pId);
 		System.out.println(pId);
-		mav.setViewName("/admin/page/menu/menu_manage");
+		mav.setViewName("admin/page/menu/menu_manage");
 		return mav;
 	}
 	
@@ -43,7 +43,7 @@ public class HouTaiMenuController {
 		mav.addObject("btn_text", "添加");
 		mav.addObject("save_url", "/admin/menu/add");
 		mav.addObject("pId", pId);
-		mav.setViewName("/admin/page/menu/add_update");
+		mav.setViewName("admin/page/menu/add_update");
 		return mav;
 	}
 	
@@ -60,7 +60,7 @@ public class HouTaiMenuController {
 		mav.addObject("btn_text", "修改");
 		mav.addObject("save_url", "/admin/menu/update?id=" + id);
 		mav.addObject("pId", menu.getpId());
-		mav.setViewName("/admin/page/menu/add_update");
+		mav.setViewName("admin/page/menu/add_update");
 		return mav;
 	}
 	

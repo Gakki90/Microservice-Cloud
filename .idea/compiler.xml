@@ -20,27 +20,16 @@
         <module name="microservicecloud-zuul-gateway-9527" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="microservicecloud-consumer-dept-80" target="1.8" />
-      <module name="microservicecloud-consumer-dept-80 (1)" target="1.8" />
-      <module name="microservicecloud-eureka-7001" target="1.8" />
-      <module name="microservicecloud-privider-dept-8001" target="1.8" />
-      <module name="microservicecloud-privider-dept-8001 (1)" target="1.8" />
-      <module name="microservicecloud-privider-dept-8003" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="microservicecloud-api" options="" />
       <module name="microservicecloud-config-3344" options="" />
       <module name="microservicecloud-consumer-80" options="" />
-      <module name="microservicecloud-consumer-dept-80" options="" />
       <module name="microservicecloud-consumer-hystrix-dashboard" options="" />
-      <module name="microservicecloud-eureka-7001" options="" />
       <module name="microservicecloud-eureka-7002" options="" />
       <module name="microservicecloud-eureka-7003" options="" />
       <module name="microservicecloud-eureka-7004" options="" />
-      <module name="microservicecloud-privider-dept-8001" options="" />
       <module name="microservicecloud-provider-order-4002" options="" />
       <module name="microservicecloud-provider-park-4003" options="" />
       <module name="microservicecloud-provider-user-4001" options="" />

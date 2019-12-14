@@ -29,7 +29,7 @@ public class LoginController {
     RestTemplate restTemplate;
     @RequestMapping( value = {"/","/login"})
     public String login(){
-        return "/login";
+        return "login";
     }
     @RequestMapping(value = "/admin/login",method = RequestMethod.POST)
     public ModelAndView admin(@RequestParam(value = "name")String name, @RequestParam(value = "password")String password) throws JSONException{
@@ -39,12 +39,13 @@ public class LoginController {
         postParameters.add("password", "248092");
         JSONObject jsonObject= restTemplate.postForObject(UrlPath.GET_ROLE_MENU, postParameters, JSONObject.class);
         ModelAndView modelAndView=new ModelAndView();
-        modelAndView.setViewName("/admin/main");
+        modelAndView.setViewName("admin/main");
         modelAndView.addObject("user", jsonObject.get("user"));
         modelAndView.addObject("msg",jsonObject.get("msg"));
         List<JSONObject> list= (List<JSONObject>) jsonObject.get("treeList");
         modelAndView.addObject("treeList", list);
         String token= "Bearer "+(String) jsonObject.get("token");
+        System.out.println(token);
         restTemplate.setInterceptors(Collections.singletonList(new TokenInterceptor(token)));
         return modelAndView;
     }
@@ -52,7 +53,7 @@ public class LoginController {
     @RequestMapping("/logout")
     public String logout()throws Exception{
         restTemplate.setInterceptors(Collections.singletonList(new TokenInterceptor("error")));
-        return "redirect:/login";
+        return "redirect:login";
     }
 
 

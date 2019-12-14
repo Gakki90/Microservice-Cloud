@@ -28,7 +28,7 @@ public class HouTaiOrderController {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("pageTitle", "订单信息");
 		mav.addObject("title", "订单信息");
-		mav.setViewName("/admin/page/order/order_manage");
+		mav.setViewName("admin/page/order/order_manage");
 		return mav;
 	}
 	
@@ -41,7 +41,7 @@ public class HouTaiOrderController {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("btn_text", "添加");
 		mav.addObject("save_url", "/admin/order/add");
-		mav.setViewName("/admin/page/order/add_update");
+		mav.setViewName("admin/page/order/add_update");
 		return mav;
 	}
 	
@@ -59,7 +59,7 @@ public class HouTaiOrderController {
 		mav.addObject("order", order);
 		mav.addObject("btn_text", "修改");
 		mav.addObject("save_url", "/admin/order/update?id=" + id);
-		mav.setViewName("/admin/page/order/add_update");
+		mav.setViewName("admin/page/order/add_update");
 		return mav;
 	}
 

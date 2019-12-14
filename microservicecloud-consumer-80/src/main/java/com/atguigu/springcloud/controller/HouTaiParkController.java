@@ -26,7 +26,7 @@ public class HouTaiParkController {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("pageTitle", "车场信息");
 		mav.addObject("title", "车场信息");
-		mav.setViewName("/admin/page/park/park_manage");
+		mav.setViewName("admin/page/park/park_manage");
 		return mav;
 	}
 	
@@ -46,7 +46,7 @@ public class HouTaiParkController {
 		
 		mav.addObject("btn_text", "添加");
 		mav.addObject("save_url", "/admin/park/add");
-		mav.setViewName("/admin/page/park/add_update");
+		mav.setViewName("admin/page/park/add_update");
 		return mav;
 	}
 	
@@ -65,7 +65,7 @@ public class HouTaiParkController {
 		mav.addObject("park", park);
 		mav.addObject("btn_text", "修改");
 		mav.addObject("save_url", "/admin/park/update?id=" + id);
-		mav.setViewName("/admin/page/park/add_update");
+		mav.setViewName("admin/page/park/add_update");
 		return mav;
 	}
 

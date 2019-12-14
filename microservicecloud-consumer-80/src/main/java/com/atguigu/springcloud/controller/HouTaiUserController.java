@@ -31,7 +31,7 @@ public class HouTaiUserController {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("pageTitle", "用户管理");
 		mav.addObject("title", "用户管理");
-		mav.setViewName("/admin/page/user/user_manage");
+		mav.setViewName("admin/page/user/user_manage");
 		return mav;
 	}
 	
@@ -56,7 +56,7 @@ public class HouTaiUserController {
 		
 		mav.addObject("btn_text", "添加");
 		mav.addObject("save_url", "/admin/user/add");
-		mav.setViewName("/admin/page/user/add_update");
+		mav.setViewName("admin/page/user/add_update");
 		return mav;
 	}
 	
@@ -84,7 +84,7 @@ public class HouTaiUserController {
 		mav.addObject("user", user);
 		mav.addObject("btn_text", "修改");
 		mav.addObject("save_url", "/admin/user/update?id=" + id);
-		mav.setViewName("/admin/page/user/add_update");
+		mav.setViewName("admin/page/user/add_update");
 		return mav;
 	}
 	
@@ -103,7 +103,7 @@ public class HouTaiUserController {
 		mav.addObject("user", user);
 		mav.addObject("btn_text", "修改");
 		mav.addObject("save_url", "/admin/user/set_new_pwd?id=" + id);
-		mav.setViewName("/admin/page/user/set_new_pwd");
+		mav.setViewName("admin/page/user/set_new_pwd");
 		return mav;
 	}
 	
