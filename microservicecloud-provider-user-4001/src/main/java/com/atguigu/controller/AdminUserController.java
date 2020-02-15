@@ -72,7 +72,17 @@ public class AdminUserController {
 				return result;
 
 		}
-		
+	@ResponseBody
+	@RequestMapping("/updatePlateNum")
+	public JSONObject updatePlateNum(User user )throws Exception {
+		JSONObject result = new JSONObject();
+		user.setUpdateDateTime(new Date());
+		userService.update(user);
+		result.put("success", true);
+		result.put("msg", "修改成功");
+		return result;
+
+	}
 		
 		/**
 		 * /admin/user/set_new_pwd

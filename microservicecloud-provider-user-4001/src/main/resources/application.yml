@@ -1,3 +1,7 @@
 spring:
   application:
     name: microservicecloud-user
+
+wx:
+  appid: wx9ed57dc1e752d83c
+  appsecret: d2195b404dbdea048a8f3e8aa1fb4c41

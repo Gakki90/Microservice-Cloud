@@ -24,6 +24,30 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+
+	@Column(length=30)
+	private String openId;
+
+
+	@Column()
+	private String url;
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setOpenId(String openId) {
+		this.openId = openId;
+	}
+
+	public String getOpenId() {
+		return openId;
+	}
+
 	@NotNull(message="用户名不能为空！")
 	@Column(length=30)
 	private  String name;//用户名
@@ -32,7 +56,6 @@ public class User implements Serializable {
 	private Role role; // 角色  
 	@Column(length=200)
 	private  String pwd;
-	@NotNull(message="真实姓名不能为空！")
 	@Column(length=200)
 	private  String trueName;
 	@Column(precision = 10, scale = 2)
@@ -156,8 +179,25 @@ public class User implements Serializable {
 	public void setUpdateDateTime(Date updateDateTime) {
 		this.updateDateTime = updateDateTime;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"id=" + id +
+				", openId='" + openId + '\'' +
+				", name='" + name + '\'' +
+				", role=" + role +
+				", pwd='" + pwd + '\'' +
+				", trueName='" + trueName + '\'' +
+				", balance=" + balance +
+				", credit=" + credit +
+				", plateNum='" + plateNum + '\'' +
+				", remark='" + remark + '\'' +
+				", orderNo=" + orderNo +
+				", createDateTime=" + createDateTime +
+				", updateDateTime=" + updateDateTime +
+				'}';
+	}
 	
 	
 	

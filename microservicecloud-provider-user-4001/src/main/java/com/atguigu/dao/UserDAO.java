@@ -16,4 +16,6 @@ public interface UserDAO extends JpaRepository<User,Integer>  {
     @Transactional
     void updatePwd(String userName, String pwd);
 
+    @Query(value="select * from t_a_user where open_id = ?1 ",nativeQuery = true)
+    User getByOpenid(String openid);
 }

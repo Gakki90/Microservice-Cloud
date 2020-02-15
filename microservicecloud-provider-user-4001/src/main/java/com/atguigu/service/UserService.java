@@ -28,6 +28,8 @@ public class UserService {
 
     @CachePut(value = "user" ,key = "'user_'+#user.id")
     public User update(User user) {
+        System.out.println(user.getId());
+        System.out.println(user.getPlateNum());
         User origin = userDao.findOne(user.getId());
         //将新的user 的非空属性传入旧的user
         BeanUtil.copyProperties(user,origin,true, CopyOptions.create().setIgnoreNullValue(true));
@@ -68,5 +70,9 @@ public class UserService {
    public User save(User user){
        return userDao.save(user);
    }
+
+    public User getByOpenid(String openid) {
+        return userDao.getByOpenid(openid);
+    }
 }
 

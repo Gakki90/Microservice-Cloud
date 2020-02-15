@@ -19,7 +19,6 @@ public class Park implements Serializable {
     private Integer id;
     @Column(length=30)
     private  String name;//停车场名称
-    @NotNull(message="地址不能为空！")
     @Column(length=60)
     private  String address;//地址
     @Column(length = 20)

@@ -36,4 +36,9 @@ public class OrderService {
     public Order findOne(Integer id){
         return orderDao.findOne(id);
     }
+    public void add(Order order){
+        orderDao.save(order);
+    }
+
+
 }
