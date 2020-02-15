@@ -1,13 +1,15 @@
-# 1 GarmentMall系统
+# 1  [Microservice-Cloud](https://github.com/Gakki90/Microservice-Cloud) 
 
 ## 1.1 简介
 
-GarmentMall是一个简单的会员制服装管理系统，包括管理员微信端，用户微信端以及基于spring boot的后端。
+ [Microservice-Cloud](https://github.com/Gakki90/Microservice-Cloud) 是一个微服务架构的停车微信小程序，核心功能是帮助用户找到附近停车场的信息，还为停车场管理员增加了后台管理系统，用于管理停车场。
 
-![](F:/IDEAprogram/GarmentMallDev/GarmentMall5.0/pic1/1-5.png)    
+## 1.2 项目架构图
+
+![](image/项目架构图.png)    
 
 
-项目的架构是SpringBoot+Mybatis+微信小程序
+
 
 * 图片展示：
 
